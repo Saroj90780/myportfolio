@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import {Box,Typography} from '@mui/material'
 import { PinContainer } from "./ui/3d-pin";
 import pimg from '../../public/5204684_2665820.jpg'
@@ -89,9 +88,14 @@ sx={{
     </>
   );
 }
+interface GridItemProps {
+    heading:string,
+    description:string,
+    href:string,
+    title:string // should be a URL or import path
+}
 
-
-const Card =({heading,description,href,title})=>{
+const Card =({heading,description,href,title}: GridItemProps)=>{
   return(
 <div className="h-[30rem] w-full flex items-center justify-center">
       <PinContainer
