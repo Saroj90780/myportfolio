@@ -26,30 +26,32 @@ const sentence = "LET'S BUILD SOMETHING TOGETHER";
   const fullText = `${firstPart} ${lastWord}`;
 
 
-    useEffect(() => {
-        const currentSentence = sentences[sentenceIndex];
-        const typingSpeed = isDeleting ? 50 : 100;
-        const pauseTime = 1100;
-        let timeout;
+   useEffect(() => {
+    const currentSentence = sentences[sentenceIndex];
+    const typingSpeed = isDeleting ? 50 : 100;
+    const pauseTime = 1100;
+    let timeout: ReturnType<typeof setTimeout>;
 
-        if (!isDeleting && charIndex < currentSentence.length) {
-            timeout = setTimeout(() => {
-                setText(currentSentence.slice(0, charIndex + 1));
-                setCharIndex(charIndex + 1);
-            }, typingSpeed);
-        } else if (isDeleting && charIndex > 0) {
-            timeout = setTimeout(() => {
-                setText(currentSentence.slice(0, charIndex - 1));
-                setCharIndex(charIndex - 1);
-            }, typingSpeed);
-        } else if (!isDeleting && charIndex === currentSentence.length) {
-            timeout = setTimeout(() => setIsDeleting(true), pauseTime);
-        } else if (isDeleting && charIndex === 0) {
-            setIsDeleting(false);
-            setSentenceIndex((prev) => (prev + 1) % sentences.length);
-        }
-        return () => clearTimeout(timeout);
-    }, [charIndex, isDeleting, sentenceIndex]);
+    if (!isDeleting && charIndex < currentSentence.length) {
+        timeout = setTimeout(() => {
+            setText(currentSentence.slice(0, charIndex + 1));
+            setCharIndex(charIndex + 1);
+        }, typingSpeed);
+    } else if (isDeleting && charIndex > 0) {
+        timeout = setTimeout(() => {
+            setText(currentSentence.slice(0, charIndex - 1));
+            setCharIndex(charIndex - 1);
+        }, typingSpeed);
+    } else if (!isDeleting && charIndex === currentSentence.length) {
+        timeout = setTimeout(() => setIsDeleting(true), pauseTime);
+    } else if (isDeleting && charIndex === 0) {
+        setIsDeleting(false);
+        setSentenceIndex((prev) => (prev + 1) % sentences.length);
+    }
+
+    return () => clearTimeout(timeout);
+}, [charIndex, isDeleting, sentenceIndex]);
+
 
 
     return (
