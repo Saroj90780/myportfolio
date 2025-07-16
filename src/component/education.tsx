@@ -1,4 +1,4 @@
-import { Box, CardMedia, Typography, CardContent, Card } from "@mui/material"
+import { Box, Typography} from "@mui/material"
 import img1 from '../../public/edu-img (2).png'
 import img2 from '../../public/edu-img (3).png'
 import img3 from '../../public/edu-img (4).png'
