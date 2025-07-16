@@ -83,7 +83,7 @@ const sentence = "LET'S BUILD SOMETHING TOGETHER";
                     fontSize: "48px",
                     fontFamily: "Poppins1",
                     letterSpacing: "9px",
-                    width: "50%",
+                    width: "55%",
                 }}>
                     {fullText.split('').map((char, index) => {
                         // Find index where last word starts
