@@ -2,43 +2,19 @@
 import {Box,Typography} from '@mui/material'
 import { PinContainer } from "./ui/3d-pin";
 import pimg from '../../public/5204684_2665820.jpg'
+import './project.css'
 
 
 
 export function AnimatedPinDemo() {
   return (
     <>
-    {/* <div className="h-[40rem] w-full flex items-center justify-center">
-      <PinContainer
-        title="/ui.aceternity.com"
-        href="https://twitter.com/mannupaaji"
-      >
-        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-          <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-            Aceternity UI
-          </h3>
-          <div className="text-base !m-0 !p-0 font-normal">
-            <span className="text-slate-500 ">
-              Customizable Tailwind CSS and Framer Motion Components.
-            </span>
-          </div>
-          <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
-        </div>
-      </PinContainer>
-    </div> */}
-{/* <Box
-sx={{
-  display:"flex",
-  flexDirection:"column",
-  height:"50vh"
-}}
-> */}
 <Typography sx={{
                     fontFamily: "Poppins3",
                     display: "flex",
                     justifyContent: "center",
-                    fontSize: "50px",
-                    marginBottom: "30px",
+                    fontSize: {md:"50px",xs:"18px"},
+                    marginBottom: {md:"30px",xs:"10px"},
                     color: "white"
                 }}> A small selection of <span style={{
                   fontFamily:'Poppins2',
@@ -46,10 +22,10 @@ sx={{
                 }}> Recent Project</span></Typography>
   <Box sx={{
     display:"flex",
-    flexDirection:"row",
+    gap:"140px",
+    flexDirection:{md:"row",xs:"column"},
     justifyContent:"center",
-    paddingLeft:"100px",
-    paddingRight:"100px"
+    
   }}>
   <Card
     heading='Aceternity UI'
@@ -97,11 +73,12 @@ interface GridItemProps {
 
 const Card =({heading,description,href,title}: GridItemProps)=>{
   return(
-<div className="h-[30rem] w-full flex items-center justify-center">
+    <>
+{/* <div className="h-[20rem] w-[20rem] flex justify-center bg-red-500"> */}
       <PinContainer
         title={`${title}`}
         href={`${href}`}>
-        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[23rem] h-[23rem]">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
             {heading}
           </h3>
@@ -110,15 +87,21 @@ const Card =({heading,description,href,title}: GridItemProps)=>{
               {description}
             </span>
           </div>
-          <div className="w-full rounded-lg mt-8">
+          <div className="w-full rounded-xl mt-6 flex items-center justify-center">
             <img 
-            className="h-60 w-60"
+            className="w-50"
             src={pimg}
             />
             </div>
+            <div className='btn-div'>
+            <button>
+              Visit
+            </button>
+            </div>
         </div>
       </PinContainer>
-    </div>
+  
+    </>
   )
 }
 export default AnimatedPinDemo

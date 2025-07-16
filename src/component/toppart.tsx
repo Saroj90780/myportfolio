@@ -58,20 +58,20 @@ const sentence = "LET'S BUILD SOMETHING TOGETHER";
         <>
             <Box
                 sx={{
-                    marginTop: '170px',
+                    marginTop: {md:'170px',xs:"120px"},
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
-                    width: "100%",
+                    width: {md:"51%",xs:"100%"},
                     gap: "20px",
-                    height:'50vh'
+                    height:{md:'50vh',xs:"37vh"}
 
                 }}>
                 <Box sx={
                     {
                         fontFamily: 'Poppins2',
-                        letterSpacing: "5px",
-                        fontSize: "23px",
+                        letterSpacing:{md: "5px",xs:"2px"},
+                        fontSize:{md: "23px",xs:"15px"},
                         color: "white"
 
                     }
@@ -80,10 +80,10 @@ const sentence = "LET'S BUILD SOMETHING TOGETHER";
                 </Box>
                  <Box sx={{
                     color: "white",
-                    fontSize: "48px",
+                    fontSize: {md: "48px",xs:"20px"},
                     fontFamily: "Poppins1",
-                    letterSpacing: "9px",
-                    width: "55%",
+                    letterSpacing: {md: "9px",xs:"4px"},
+                    width: {md: "100%",xs:"88%"},
                 }}>
                     {fullText.split('').map((char, index) => {
                         // Find index where last word starts

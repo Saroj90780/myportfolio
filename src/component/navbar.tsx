@@ -9,10 +9,11 @@ const item=['Home','Project','Education','Contact','About me']
 <>
 <Box 
 sx={{
+
     fontFamily:'Poppins2',
-    display:"flex",
+    display:{md:"flex",xs:"none"},
     justifyContent:"center",
-    gap:'27px',
+    gap:'30px',
     paddingTop:"26px",
     paddingBottom:"26px",
     fontSize:"20px",
