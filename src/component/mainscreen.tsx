@@ -1,14 +1,5 @@
-import {
-  Box,
-  Button,
-  Drawer,
-  IconButton,
-  List,
-  ListItem,
-  ListItemText,
-  CardMedia
-} from '@mui/material';
-import backimg from '../../public/black-textured-paper-background.jpg'
+import {Box} from '@mui/material';
+
 import Navbar from './navbar'
 import Toppart from './toppart'
 import Aboutme from './aboutme'

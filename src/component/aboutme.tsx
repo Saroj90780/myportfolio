@@ -1,9 +1,6 @@
 import { Box, Grid, Typography } from '@mui/material';
 import React from "react";
-// import { Lock, Search, Settings, Sparkles } from "lucide-react";
 import { GlowingEffect } from "./ui/glowing-effect";
-// import Earth from './ui/earth'
-// import img from '../../public/reverse.jpg'
 import img1 from '../../public/programming-background-with-person-working-with-codes-computer.jpg'
 import img2 from '../../public/view-neon-illuminated-gaming-desk-setup-with-keyboard.jpg'
 import img3 from '../../public/32993994_840843081452.jpg'

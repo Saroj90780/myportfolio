@@ -4,7 +4,7 @@ import {
 import './toppart.css'
 // import App from './canvas'
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState} from 'react';
 const Toppart = () => {
     const sentences = [
         "WELCOME TO MY PORTFOLIO",
