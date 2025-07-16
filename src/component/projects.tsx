@@ -62,12 +62,12 @@ sx={{
     heading='Aceternity UI'
     description='jdnvgkjrfgjkrnjdfkrg'
     href="https://twitter.com/mannupaaji"
-    title="/ui.aceternity.com"
+    title="/google.com"
     />
       <Card
     heading='Aceternity UI'
     description='jdnvgkjrfgjkrnjdfkrg'
-    href="https://twitter.com/mannupaaji"
+    href="https://google.com"
     title="/ui.aceternity.com"
     />
 </Box>

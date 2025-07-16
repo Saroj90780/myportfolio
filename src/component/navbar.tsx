@@ -22,7 +22,7 @@ sx={{
     { item.map((items) => (
 
     
-        <Box>
+        <Box key={items}>
 {items}
         </Box>
     ))}
