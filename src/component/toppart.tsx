@@ -17,7 +17,7 @@ const Toppart = () => {
     const [isDeleting, setIsDeleting] = useState(false);
 
 
-const sentence = "LET'S BUILD SOMETHING TOGETHER";
+const sentence = " LET'S BUILD SOMETHING TOGETHER";
   const words = sentence.split(' ');
   const lastWord = words.pop(); // Remove and store last word
   const firstPart = words.join(' ');
@@ -82,8 +82,8 @@ const sentence = "LET'S BUILD SOMETHING TOGETHER";
                     color: "white",
                     fontSize: {md: "48px",xs:"20px"},
                     fontFamily: "Poppins1",
-                    letterSpacing: {md: "9px",xs:"4px"},
-                    width: {md: "100%",xs:"88%"},
+                    letterSpacing: {md: "9px",xs:"3px"},
+                    width: {md: "100%",xs:"320px"},
                 }}>
                     {fullText.split('').map((char, index) => {
                         // Find index where last word starts

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import { cn } from "./lib/utils";
+import { Box } from "@mui/material"
 
 
 export const PinContainer = ({
@@ -37,14 +38,9 @@ export const PinContainer = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       onClick={() => window.location.href = `${href}`}
-  style={{ cursor: "pointer", color: "blue", textDecoration: "underline",width:"300px",height:"300px" ,marginTop:"50px"}}
-  role="link"
-  tabIndex={0}
-  onKeyDown={(e) => {
-    if (e.key === "Enter") {
-      window.location.href = "https://example.com";
-    }
-  }}
+      style={{ cursor: "pointer", color: "blue", textDecoration: "underline", width: "300px", height: "300px", marginTop: "50px"}}
+      role="link"
+      tabIndex={0}
     >
       <div
         style={{
@@ -53,15 +49,29 @@ export const PinContainer = ({
         }}
         className="absolute left-1/2 top-1/2 ml-[0.09375rem] -translate-x-1/2 -translate-y-1/2"
       >
-        <div
-          style={{
+        <Box  sx={{
             transform: transform,
-            backgroundColor:"rgb(34, 21, 46)"
+            backgroundImage: 'linear-gradient(to top left , rgb(0, 6, 27), rgb(55, 35, 73),rgb(65, 0, 77),rgb(55, 35, 73),rgb(0, 6, 27))',
+            height: {md:"380px", xs: "330px" },
+            width: { md:"380px",xs: "330px" },
+            position: 'absolute',
+            left: '50%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'flex-start',
+            borderRadius: '1rem', // rounded-2xl = 16px = 1rem
+            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            transition: 'transform 1s ease', // transition + duration
+            overflow: 'hidden',
+            '&:hover': {
+              border: '1px solid rgba(255, 255, 255, 0.2)', // group-hover/pin
+            },
           }}
-          className="absolute left-1/2 flex justify-start items-start  rounded-2xl  shadow-[0_8px_16px_rgb(0_0_0/0.4)] border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
+        // className="absolute left-1/2 flex justify-start items-start rounded-2xl  shadow-[0_8px_16px_rgb(0_0_0/0.4)] border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
         >
           <div className={cn(" relative z-50 ", className)}>{children}</div>
-        </div>
+        </Box>
       </div>
       <PinPerspective title={title} href={href} />
     </div>

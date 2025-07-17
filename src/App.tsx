@@ -1,4 +1,5 @@
 import Mainscr from './component/mainscreen'
+
 import './App.css'
 
 function App() {

@@ -1,8 +1,14 @@
 .btn-div{
     width: 100%;
     display: flex;
-    justify-content: end;
-    margin-top:15px;
+    justify-content:space-between;
+    margin-top:18px;
+    font-family: "Poppins2";
+    color:white;
+}
+
+.btn-div div{
+    margin-top: 10px;
 }
 button{
     color: white;

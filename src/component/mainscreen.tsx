@@ -7,6 +7,7 @@ import Newcard from './projects'
 import Education from './education'
 import backimg from '../../public/abstract-blue-lens-flare-with-hexagon-ghost-design-element.jpg'
 import phoneimg from '../../public/blue-light-black-background.jpg'
+import Myskills from './myskills'
 
 const Mainscreen =()=> {
 
@@ -32,6 +33,8 @@ const Mainscreen =()=> {
       <Aboutme/>
       <Newcard/>
       <Education/>
+      <Myskills/>
+
 
       
       

@@ -87,30 +87,32 @@ const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
                 <Grid sx={{
                     display:"flex",
                     flexDirection: "column",
-                    gap: "20px",
+                    gap: "27px",
+                    marginLeft:"15px",
+                    marginRight:"15px"
                 }}>
                     <GridItem
-                            area="h-45 w-86"
+                            area="h-45 w-full"
                             description="Running out of copy so I'll write anything."
                             img={img2}
                         />
                         <GridItem
-                            area="h-45 w-86"
+                            area="h-45 w-full"
                             description="Running out of copy so I'll write anything."
                             img={img1}
                         />
                         <GridItem
-                            area="h-45 w-86"
+                            area="h-45 w-full"
                             description="Running out of copy so I'll write anything."
                             img={img1}
                         />
                         <GridItem
-                            area="h-45 w-86"
+                            area="h-45 w-full"
                             description="Running out of copy so I'll write anything."
                             img={img5}
                         />
                         <GridItem
-                            area="h-45 w-86"
+                            area="h-45 w-full"
                             description="Running out of copy so I'll write anything."
                             img={img3}
                         />
