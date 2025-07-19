@@ -5,9 +5,10 @@ import Toppart from './toppart'
 import Aboutme from './aboutme'
 import Newcard from './projects'
 import Education from './education'
-import backimg from '../../public/abstract-blue-lens-flare-with-hexagon-ghost-design-element.jpg'
-import phoneimg from '../../public/blue-light-black-background.jpg'
+import backimg from '../image/abstract-blue-lens-flare-with-hexagon-ghost-design-element.jpg'
+import phoneimg from '../image/blue-light-black-background.jpg'
 import Myskills from './myskills'
+import Lastpart from './lastpart'
 
 const Mainscreen =()=> {
 
@@ -34,6 +35,8 @@ const Mainscreen =()=> {
       <Newcard/>
       <Education/>
       <Myskills/>
+      <Lastpart/>
+      
 
 
       

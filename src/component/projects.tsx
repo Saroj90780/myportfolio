@@ -2,9 +2,9 @@
 import { useState, useEffect } from 'react';
 import { Box, Typography } from '@mui/material'
 import { PinContainer } from "./ui/3d-pin";
-import pimg from '../../public/Frame 4 (1).png'
+import pimg from '../image/Frame 4 (1).png'
 import './project.css'
-import langimg from '../../public/Frame 3 (1).png'
+import langimg from '../image/Frame 3 (1).png'
 
 
 

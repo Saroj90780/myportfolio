@@ -1,9 +1,9 @@
 import { Box, Typography } from "@mui/material"
 import { useState,useEffect } from "react"
-import img1 from '../../public/edu-img (2).png'
-import img2 from '../../public/edu-img (3).png'
-import img3 from '../../public/edu-img (4).png'
-import img4 from '../../public/edu-img (5).png'
+import img1 from '../image/edu-img (2).png'
+import img2 from '../image/edu-img (3).png'
+import img3 from '../image/edu-img (4).png'
+import img4 from '../image/edu-img (5).png'
 
 const educationData = [
     {

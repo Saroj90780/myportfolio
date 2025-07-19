@@ -1,5 +1,5 @@
 import { Typography,Box} from "@mui/material"
-import skillsimg from '../../public/Group 1909 (1).png'
+import skillsimg from '../image/Group 1909 (1).png'
 const Myskills=()=>{
    return(
     <>
@@ -8,14 +8,14 @@ const Myskills=()=>{
                 display: "flex",
                 justifyContent: "center",
                 fontSize: { md: "50px", xs: "24px"},
-                marginTop:"40px",
+                marginTop:"30px",
                 color: "white"
             }}>My <span style={{
                 fontFamily: 'Poppins2',
                 color: "rgb(197, 117, 237)",
             }}>Skills</span></Typography>
             <Box sx={{
-                width:{md:"45%",xs:"90%"}
+                width:{md:"50%",xs:"90%"}
             }}>
                 <img src={skillsimg} />
             </Box>
