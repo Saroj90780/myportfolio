@@ -29,7 +29,7 @@ export function FloatingDockDemo() {
           height={40}
           alt="github"
         />      ),
-      href: "#",
+      href: "https://github.com/Saroj90780",
     },
     {
       title: "X",
@@ -52,7 +52,7 @@ export function FloatingDockDemo() {
           alt="instagram"
         />
       ),
-      href: "#",
+      href: "https://www.instagram.com/mr._highness/",
     },
     {
       title: "Linkdin",
@@ -63,7 +63,7 @@ export function FloatingDockDemo() {
           height={40}
           alt="Linkdin"
         />),
-      href: "#",
+      href: "https://www.linkedin.com/in/saroj-padhi-50024a189/",
     }
   ];
   return (

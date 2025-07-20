@@ -1,10 +1,11 @@
-import {
-    Box
-} from '@mui/material'
+import {Box} from '@mui/material'
 import './toppart.css'
+import Downloadcv from './downloadcv'
+// import DownloadIcon from '@mui/icons-material/Download';
+// import cv from '../image/Saroj padhi resume....pdf'
 // import App from './canvas'
 
-import { useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 const Toppart = () => {
     const sentences = [
         "WELCOME TO MY PORTFOLIO",
@@ -17,73 +18,72 @@ const Toppart = () => {
     const [isDeleting, setIsDeleting] = useState(false);
 
 
-const sentence = " LET'S BUILD SOMETHING TOGETHER";
-  const words = sentence.split(' ');
-  const lastWord = words.pop(); // Remove and store last word
-  const firstPart = words.join(' ');
+    const sentence = " LET'S BUILD SOMETHING TOGETHER";
+    const words = sentence.split(' ');
+    const lastWord = words.pop(); // Remove and store last word
+    const firstPart = words.join(' ');
 
-  // Combine all letters including space between firstPart and lastWord
-  const fullText = `${firstPart} ${lastWord}`;
+    // Combine all letters including space between firstPart and lastWord
+    const fullText = `${firstPart} ${lastWord}`;
 
 
-   useEffect(() => {
-    const currentSentence = sentences[sentenceIndex];
-    const typingSpeed = isDeleting ? 50 : 100;
-    const pauseTime = 1100;
-    let timeout: ReturnType<typeof setTimeout>;
+    useEffect(() => {
+        const currentSentence = sentences[sentenceIndex];
+        const typingSpeed = isDeleting ? 50 : 100;
+        const pauseTime = 1100;
+        let timeout: ReturnType<typeof setTimeout>;
 
-    if (!isDeleting && charIndex < currentSentence.length) {
-        timeout = setTimeout(() => {
-            setText(currentSentence.slice(0, charIndex + 1));
-            setCharIndex(charIndex + 1);
-        }, typingSpeed);
-    } else if (isDeleting && charIndex > 0) {
-        timeout = setTimeout(() => {
-            setText(currentSentence.slice(0, charIndex - 1));
-            setCharIndex(charIndex - 1);
-        }, typingSpeed);
-    } else if (!isDeleting && charIndex === currentSentence.length) {
-        timeout = setTimeout(() => setIsDeleting(true), pauseTime);
-    } else if (isDeleting && charIndex === 0) {
-        setIsDeleting(false);
-        setSentenceIndex((prev) => (prev + 1) % sentences.length);
-    }
+        if (!isDeleting && charIndex < currentSentence.length) {
+            timeout = setTimeout(() => {
+                setText(currentSentence.slice(0, charIndex + 1));
+                setCharIndex(charIndex + 1);
+            }, typingSpeed);
+        } else if (isDeleting && charIndex > 0) {
+            timeout = setTimeout(() => {
+                setText(currentSentence.slice(0, charIndex - 1));
+                setCharIndex(charIndex - 1);
+            }, typingSpeed);
+        } else if (!isDeleting && charIndex === currentSentence.length) {
+            timeout = setTimeout(() => setIsDeleting(true), pauseTime);
+        } else if (isDeleting && charIndex === 0) {
+            setIsDeleting(false);
+            setSentenceIndex((prev) => (prev + 1) % sentences.length);
+        }
 
-    return () => clearTimeout(timeout);
-}, [charIndex, isDeleting, sentenceIndex]);
-
+        return () => clearTimeout(timeout);
+    }, [charIndex, isDeleting, sentenceIndex]);
 
 
     return (
         <>
             <Box
                 sx={{
-                    marginTop: {md:'170px',xs:"120px"},
+                    marginTop: { md: '170px', xs: "120px" },
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
-                    width: {md:"51%",xs:"100%"},
+                    width: { md: "51%", xs: "100%" },
                     gap: "20px",
-                    height:{md:'50vh',xs:"37vh"}
+                    height: { md: '50vh', xs: "37vh" }
 
                 }}>
                 <Box sx={
                     {
                         fontFamily: 'Poppins2',
-                        letterSpacing:{md: "5px",xs:"2px"},
-                        fontSize:{md: "23px",xs:"15px"},
+                        letterSpacing: { md: "5px", xs: "2px" },
+                        fontSize: { md: "23px", xs: "15px" },
                         color: "white"
 
                     }
                 }>{text}
                     <span className="blinking-cursor">|</span>
                 </Box>
-                 <Box sx={{
+                <Box sx={{
                     color: "white",
-                    fontSize: {md: "48px",xs:"20px"},
+                    fontSize: { md: "48px", xs: "20px" },
                     fontFamily: "Poppins1",
-                    letterSpacing: {md: "9px",xs:"3px"},
-                    width: {md: "100%",xs:"320px"},
+                    letterSpacing: { md: "9px", xs: "3px" },
+                    width: { md: "800px", xs: "320px" },
                 }}>
                     {fullText.split('').map((char, index) => {
                         // Find index where last word starts
@@ -110,17 +110,10 @@ const sentence = " LET'S BUILD SOMETHING TOGETHER";
                 }}>
                     Hi, I'm Saroj Kumar Padhi <span role="img" aria-label="waving hand">👋</span>
                 </Box>
-            
+                <Downloadcv/>   
+
             </Box>
         </>
     )
 }
 export default Toppart
-
-
-
-
-
-
-
-

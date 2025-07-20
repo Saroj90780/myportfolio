@@ -1,4 +1,4 @@
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 
 import Navbar from './navbar'
 import Toppart from './toppart'
@@ -8,41 +8,56 @@ import Education from './education'
 import backimg from '../image/abstract-blue-lens-flare-with-hexagon-ghost-design-element.jpg'
 import phoneimg from '../image/blue-light-black-background.jpg'
 import Myskills from './myskills'
-import Lastpart from './lastpart'
+import Footer from './footer'
 
-const Mainscreen =()=> {
+const Mainscreen = () => {
 
 
   return (
-<>
-    <Box sx={{
-      width: '98.8vw',
-      overflowX: "hidden",
-      position:"relative",
-      backgroundImage: {md:`url(${backimg})`,xs:`url(${phoneimg})`},
-    backgroundSize:"cover",
-    backgroundPosition: 'bottom',
-    backgroundColor:"rgb(19, 19, 36)",
-    // background: "linear-gradient(135deg, rgba(228, 102, 102, 0.6), rgba(106, 106, 219, 0.9))",
-    display:"flex",
-    flexDirection:"column",
-    alignItems:"center",
+    <>
+      <Box sx={{
+        width: '98.8vw',
+        overflowX: "hidden",
+        position: "relative",
+        backgroundImage: { md: `url(${backimg})`, xs: `url(${phoneimg})` },
+        backgroundSize: "cover",
+        backgroundPosition: 'bottom',
+        backgroundColor: "rgb(19, 19, 36)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        scrollBehavior: "smooth" // 👈 Smooth scroll enabled
+      }}>
+        <Navbar />
+        <Box id="Home" sx={{
+          width: "100%", display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}>
+          <Toppart />
+        </Box>
 
-    }}>
-      <Navbar/>
-      <Toppart/>
-      <Aboutme/>
-      <Newcard/>
-      <Education/>
-      <Myskills/>
-      <Lastpart/>
-      
+        <Box id="About me">
+          <Aboutme />
+        </Box>
 
+        <Box id="Project">
+          <Newcard />
+        </Box>
 
-      
-      
-    </Box>
-</>
+        <Box id="Education" sx={{
+          width: "100%", display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}>
+          <Education />
+        </Box>
+        <Myskills />
+        <Box id="Contact">
+        </Box>
+        <Footer/>
+      </Box>
+    </>
   )
 }
 
